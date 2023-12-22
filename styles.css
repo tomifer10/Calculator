@@ -1,0 +1,179 @@
+* {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body {
+    background-color: #005f73;
+    display: grid;
+    place-items: center;
+    
+}
+
+#dark-container {
+    display: grid;
+    color: #ead8a6;
+    justify-content: center;
+    grid-template-columns: 1 1;
+    grid-template-rows: 1;
+    margin-bottom: 3em;
+
+}
+
+/*  for the container of icons and text */
+.toggle-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* for each icon container */
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+}
+
+/*  for the paragraph inside the icon container */
+.icon-container p {
+    margin-left: 5px; 
+}
+.icon-container #lightP{
+    color: #ead8a6;
+}.icon-container #darkP{
+    color: #001119;
+}
+
+label {
+    width: 120px;
+    height: 60px;
+    position: relative;
+    background-color: #ead8a6;
+    border-radius: 180px;
+    margin: 0 auto;
+    cursor: pointer;
+    
+}
+
+label:after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 180px;
+    position: absolute;
+    background-color: #001119;
+    
+}
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked + label {
+    background-color: #9b2226;
+}
+
+input:checked + label:after {
+    left: 120px;
+    transform: translateX(-100%);
+    background-color: #9b2226;
+}
+
+.dark-mode input:checked + label:after {
+    background-color: black;
+}
+
+/* Dark mode styles for calculator grid */
+.dark-mode {
+    background-color:  #1b263c;
+}
+
+.dark-mode #calculator-grid {
+    background-color: #001119;
+    box-shadow: 0 0 10px black;
+}
+
+.dark-mode button {
+    background-color: #9b2226;
+    color:#001119;
+}
+
+.dark-mode h2 {
+    color:#9b2226;
+}
+
+.dark-mode #display {
+    background-color: #9b2226;
+    color:#001119 ;
+}
+
+.dark-mode .icon-container #darkP{
+    color: #9b2226;
+}
+
+
+#calculator-grid {
+    background-color: #ead8a6;
+    border-radius: 1em;
+    box-shadow: 0 0 10px #001119;
+    height: 35rem;
+    width: 26rem;
+    padding: 0.3em;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 0.2rem;
+}
+
+#display {
+    grid-column: 1/-1;
+    background-color: #005f73;
+    height: 6rem;
+    color: #ead8a6;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    border: 1px solid #0a9396;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+button {
+    background-color: #0a9396;
+    color: #001119;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 1px #0a9396;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73;
+    transition: filter 0.3s ease;
+    filter: brightness(0.8);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr; 
+    }
+
+    #calculator-grid {
+        width: 100%; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+        font-size: 1rem; 
+    }
+
+    #display {
+        font-size: 1.2rem; 
+    }
+}

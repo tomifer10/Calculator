@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Force Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lato&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div id="dark-container">
+            <h2>May the Force be with your operations!</h2>
+            <div class="toggle-icons">
+                <div class="icon-container">
+                    <p id="lightP">Light Mode</p>
+                </div>
+                <input type="checkbox" id="darkMode-toggle">
+                <label for="darkMode-toggle"></label>
+                <div class="icon-container">
+                    <p id="darkP">Dark Mode</p>
+                </div>
+    </section>  
+    <section id="calculator-grid"> 
+         <div id="display"></div>
+        <button class="button operator-button" data-value="clear-button">C</button>
+        <button class="button operator-button" data-value="+/-">+/-</button>
+        <button class="button operator-button" data-value="%" >%</button>
+        <button class="button operator-button" data-value="/">/</button>
+        <button class="button number-button" data-value="7">7</button>
+        <button class="button number-button" data-value="8">8</button>
+        <button class="button number-button" data-value="9" >9</button>
+        <button class="button operator-button" data-value="*">*</button>
+        <button class="button number-button" data-value="4">4</button>
+        <button class="button number-button" data-value="5">5</button>
+        <button class="button number-button" data-value="6">6</button>
+        <button class="button operator-button" data-value="-">-</button>
+        <button class="button number-button" data-value="1">1</button>
+        <button class="button number-button" data-value="2">2</button>
+        <button class="button number-button" data-value="3">3</button>
+        <button class="button operator-button" data-value="+">+</button>
+        <button class="button span-two number-button" data-value="0" >0</button>
+        <button class="button operator-button" data-value=",">,</button>
+        <button class="button operator-button" data-value="=">=</button>
+    </section>
+</body>
+</html>
